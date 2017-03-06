@@ -95,13 +95,12 @@ def world():
 def get_entity(entity):
     '''This is the GET version of the entity interface, return a representation of the entity'''
     #Print("Sending Entity: " + myworld.get(entity))
-    #Never called?
     return jsonify(myWorld.get(entity))
 
 @app.route("/clear", methods=['POST','GET'])
 def clear():
     '''Clear the world out!'''
-    print("Clearing World")
+    #print("Clearing World")
     myWorld.clear()
     return '{}'
 
